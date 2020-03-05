@@ -1,12 +1,18 @@
 .PHONY: docs
 
+all: fmt lint
+
+test:
+	poetry run pytest
+	poetry run python manage.py test
+
 clean:
 	find . -name \*.pyc -delete
 	rm -rf .cache
 	rm -rf build
 
 fmt:
-	black .
+	poetry run black .
 
 lint:
-	flake8 .
+	poetry run flake8 .

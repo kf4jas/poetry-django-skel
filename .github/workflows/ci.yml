@@ -35,3 +35,9 @@ jobs:
           DJANGO_SETTINGS_MODULE: webproject.settings
           SECRETS_FILE: .confidential/ci.json
         run: poetry run pytest --cov . -n 2
+
+      - name: Test with Django's Builtin Test
+        env:
+          DJANGO_SETTINGS_MODULE: webproject.settings
+          SECRETS_FILE: .confidential/ci.json
+        run: poetry run python manage.py test
