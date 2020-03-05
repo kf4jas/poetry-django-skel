@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "devsecweb"
+version = "0.1.1"
+description = ""
+authors = ["Joe <joe@sunset-crew.com>"]
+
+[[tool.poetry.source]]
+name = "focus"
+url = "https://joes.focu.site/"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+django = "^3.0.4"
+confidential = "^2.3.0"
+psycopg2-binary = "^2.8.4"
+python-dotenv = "^0.12.0"
+flake8 = "^3.7.9"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.3.5"
+pytest-cov = "^2.8.1"
+pytest-django = "^3.8.0"
+pytest-xdist = "^1.31.0"
+black = {version = "^19.10b0", allow-prereleases = true}
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
